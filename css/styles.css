@@ -189,3 +189,118 @@ address {
 }
 
 /*#endregion Hero*/
+
+/*#region Modal*/
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(51, 88, 83, 0.48);
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -100%) scale(0.1); */
+  transform: translate(-50%, -50%);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 52px 49px;
+  width: 598px;
+  min-height: 670px;
+
+  background-color: #fff;
+
+  transition: transform 500ms ease-in-out;
+}
+
+.backdrop.is-open .modal {
+  /* transform: translate(-50%, -50%) scale(1) rotate(-3turn); */
+}
+
+.modal-title {
+  margin-bottom: 45px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.38;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #252b42;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+
+  font-size: 15px;
+  line-height: 1.07;
+  letter-spacing: 0.01em;
+  color: #22343d;
+
+  transition: color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.form-input {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 19px 20px;
+  width: 100%;
+  height: 54px;
+  outline: none;
+
+  background-color: #f5f5f5;
+
+  transition: border-color 250ms ease-in-out;
+}
+
+.form-input:focus {
+  border-color: #02897a;
+}
+
+/* .form-label:has(+ .form-input:focus) {
+  color: red;
+} */
+
+/* .form-field:focus-within .form-label {
+  color: #02897a;
+  transform: translate(-20px, -43px);
+} */
+
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-20px, -43px);
+}
+
+.form-input:focus + .form-label {
+  color: #02897a;
+  transform: translate(-20px, -43px);
+}
+
+/*#endregion Modal*/
