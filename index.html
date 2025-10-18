@@ -69,21 +69,21 @@
 
     <main>
       <section>
-        <h1>Work at the speed of thought</h1>
-        <p>
-          Tools, tutorials, design and innovation experts, all in one place! The
-          most intuitive way to imagine your next user experience.
-        </p>
-
-        <a class="hero-link main-btn" href="">Get started</a>
-        <button type="button">Watch the Video</button>
-
-        <img
-          src="./images/hero-img.svg"
-          alt="Hero img"
-          width="610"
-          height="555"
-        />
+        <div class="container">
+          <h1>Work at the speed of thought</h1>
+          <p>
+            Tools, tutorials, design and innovation experts, all in one place!
+            The most intuitive way to imagine your next user experience.
+          </p>
+          <a class="hero-link main-btn" href="">Get started</a>
+          <button type="button">Watch the Video</button>
+          <img
+            src="./images/hero-img.svg"
+            alt="Hero img"
+            width="610"
+            height="555"
+          />
+        </div>
       </section>
 
       <section>
@@ -215,5 +215,35 @@
         </ul>
       </section>
     </main>
+
+    <div class="backdrop is-open">
+      <div class="modal">
+        <p class="modal-title">Send a message</p>
+
+        <form class="form">
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder=" "
+            />
+            <label class="form-label" for="user-name">Name</label>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder=" "
+            />
+            <label class="form-label" for="user-email">Email</label>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
